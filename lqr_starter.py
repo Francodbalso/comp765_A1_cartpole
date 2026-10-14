@@ -16,20 +16,20 @@ def lqr(A, B, Q, R):
 # Note that they should be matrices not scalars.
 # Then, figure out how to apply the resulting k
 # to solve for a control, u, within the policyfn that balances the cartpole.
-A = np.array([[ 1, 0, 0, 0 ],
-	          [ 0, 1, 0, 0 ],
-	          [ 0, 0, 1, 0 ],
-              [ 0, 0, 0, 1 ]] )
+A = np.array([[ 0, 1.0, 0, 0 ],
+	          [ 0, -0.16, 0, 5.892 ],
+	          [ 0, -0.48, 0, 47.136 ],
+              [ 0, 0, 1.0, 0 ]] )
 
-B = np.array( [[1, 1, 1, 1 ]] )
+B = np.array( [[0, 1.6, 4.8, 1 ]] )
 B.shape = (4,1)
 
-Q =  np.array([[ 1, 0, 0, 0 ],
-       	       [ 0, 1, 0, 0 ],
-	           [ 0, 0, 1, 0 ],
-               [ 0, 0, 0, 1 ]] )
+Q =  np.array([[ 4, 0, 0, 0 ],
+       	       [ 0, 4, 0, 0 ],
+	           [ 0, 0, 40, 0 ],
+               [ 0, 0, 0, 40 ]] )
 
-R = np.array([[100]])
+R = np.array([[10]])
 print( "A holds:",A)
 print( "B holds:",B)
 print( "Q holds:",Q)

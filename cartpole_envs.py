@@ -23,7 +23,7 @@ class CartPole(object):
         self.m = 0.5
         self.M = 0.5
         self.l = 0.5
-        self.b = 1.0
+        self.b = 0.1
 
         self.x0 = np.array(x0, dtype=np.float64).flatten()
         self.x = self.x0
@@ -129,7 +129,7 @@ class DoubleCartPole(object):
         self.m = 0.5
         self.M = 0.5
         self.l = 0.5
-        self.b = 1.0
+        self.b = 0.1
 
         self.x0 = np.array(x_init, dtype=np.float64).flatten()
         self.x = self.x0
