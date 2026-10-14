@@ -112,9 +112,11 @@ if __name__ == '__main__':
     # Starting here is effectively the main function.
     # It's a simple GUI drawing loop that calls to your code to compute the control, sets it to the
     # cartpole class and loops the GUI to show what happened.
-    pendulum = CartPole(initial_offset=args.initial_offset) if args.env == 'CartPole' else DoubleCartPole(initial_offset=args.initial_offset)
+    swingup = True
+    initial_offset = np.pi if swingup else args.initial_offset
+    pendulum = CartPole(initial_offset=initial_offset) if args.env == 'CartPole' else DoubleCartPole(initial_offset=args.initial_offset)
     state = pendulum.get_state()
-    controller = Controller()
+    controller = Controller(swingup=swingup) 
 
     # Data collection vars
     if args.data_collection:

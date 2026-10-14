@@ -24,12 +24,12 @@ A = np.array([[ 0, 1.0, 0, 0 ],
 B = np.array( [[0, 1.6, 4.8, 1 ]] )
 B.shape = (4,1)
 
-Q =  np.array([[ 4, 0, 0, 0 ],
-       	       [ 0, 4, 0, 0 ],
-	           [ 0, 0, 40, 0 ],
-               [ 0, 0, 0, 40 ]] )
+Q =  np.array([[ 40, 0, 0, 0 ],
+       	       [ 0, 10, 0, 0 ],
+	           [ 0, 0, 400, 0 ],
+               [ 0, 0, 0, 2000 ]] )
 
-R = np.array([[10]])
+R = np.array([[0.1]])
 print( "A holds:",A)
 print( "B holds:",B)
 print( "Q holds:",Q)
